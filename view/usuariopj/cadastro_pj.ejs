@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Cadastropj</title>
+    <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="Description" content="Home">
+        <meta name="Keywords" content="Home, html, web">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link id="acessibilidadeCss" rel="stylesheet" href="estilo.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="JavaScript/cadastro.js"></script>
+        <script src="JavaScript/fonte.js"></script>
+        <script src="JavaScript/contraste.js"></script>
+
+        <!-- CSS -->  
+
+        <link rel="stylesheet" type="text/css" href="/view/HTML_CSS/estilo.css" media="screen" />
+
+  </head>
+  <body style="width:100%;">
+        <!--Barra de Acessibilidade-->
+        <div id="acessibilidade">
+            <ul id="atalhos" class="d-none d-lg-inline">
+               <li><a href="#titulo1_cadastro" accesskey="1" title="Ir diretamente para o conteúdo">|   Ir para o conteúdo [1]</a></li>
+               <li><a href="#menu" accesskey="2" title="Ir diretamente para o menu">Ir para o menu [2]</a></li>
+               <li><a href="#rodape" accesskey="3" title="Ir diretamente para o rodapé">Ir para o rodapé [3]  |</a></li>
+            </ul>
+            <ul id="atalhos2">
+              <li><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">|  Acessibilidade</a></li>
+             <li class="contraste"><a href="javascript:void(0)" title="Contraste Preto" id="contraste">CONTRASTE PRETO</a></li>
+             <li class="contraste"><a href="javascript:void(0)" title="Sem Contraste" id="semcontraste">SEM CONTRASTE</a></li>
+             <li class="fonte"><a href="javascript:void(0);" title="Aumentar a fonte (Ctrl +)" id="aumenta">A+</a></li>
+             <li class="fonte"><a href="javascript:void(0);" title="Diminuir a Fonte (Ctrl -)" id="diminui">A-  |</a></li>
+            </ul>      
+    </div>
+       <!--Libras-->
+       <div vw class="enabled">
+           <div vw-access-button class="active"></div>
+           <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+           </div>
+           </div>
+           <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+           <script>
+           new window.VLibras.Widget('https://vlibras.gov.br/app');
+           </script>
+       <header>
+         <!-- Inicio Bootstrap -->
+               <!-- Parte Superior do Menu -->
+               <nav class="navbar navbar-expand fundo">
+                 <a class="navbar-brand" href="index.html"><img id="logo" src="/view/HTML_CSS/Imagens/carites.png" alt="Logo marca"></a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarsExample02">
+                      <form class="form-inline my-2 my-md-0 d-none d-lg-inline">
+                         <input class="form-control" type="search" list="historico" placeholder=" Pesquisa">
+                         <a href="pesquisar.html"> <input class="btnBusca" type="button"> </a>
+                       </form>
+                       <datalist class="datalist_edit" id="historico">
+                         <option value ="Arte Brasileira"></option>
+                         <option value ="Artesanato"></option>
+                         <option value ="Quadros e Pinturas"></option>
+                         <option value ="Decoração"></option>
+                         <option value ="Livros infantis"></option>
+                       </datalist>
+                   <ul class="navbar-nav mr-auto ml-5 ">
+                     <li class="nav-item active ">
+                       <a class="nav-link" href="Login.html"><img src="/view/HTML_CSS/Imagens/img_cadastro.fw.png" alt="cadastro" style="width:100%"></a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="doacao.html"><img src="/view/HTML_CSS/Imagens/img_doar.fw.png" alt="doação" style="width:100%"></a>
+                       </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="carrinho.html"><img src="/view/HTML_CSS/Imagens/img_carrinho.fw.png" alt="carrinho" style="width:100%"></a>
+                     </li>
+                   </ul>
+                 </div>
+               </nav>
+             <!-- Parte Inferior do Menu -->
+             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul  class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Arte</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Itens decorativos</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Livros</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Pinturas</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Acessórios</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Bordados</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Caixas Artesanais</a>
+                  </li>
+                </ul>
+                <div class="amarelo_menu">
+                <a href="#" class="d-block d-lg-inline"><img src="/view/HTML_CSS/Imagens/img_sobre.fw.png" alt="Sobre nós"></a>
+                <a href="#" class="d-block d-lg-inline"><img src="/view/HTML_CSS/Imagens/img_contato.fw.png" alt="Contato"></a>
+                </div>
+              </div>
+            </nav>
+         <!-- Fim Bootstrap -->
+        </header>
+        <!--Inicio Conteudo-->
+        <section> 
+                <ul class="breadcrump2">
+                    <li><a href="index.html" >Início</a></li>
+                    <li>Cadastro</li> 
+                </ul>
+            <div id="capa_cadastro">
+                <img src="/view/HTML_CSS/Imagens/imagem_cadastro.png" alt="Pintura" id="capa_cadastro">
+
+                
+            </div>
+                <h1 id="titulo1_cadastro">Crie sua conta agora!</h1>
+            <form name="cadastro" id="cadastro" method="post" onsubmit="return validar_cadastro();">
+
+                <div id="cadastro_left">
+                            <label for="nome" class="required"> Nome Fantasia</label>
+                            <input type="text" name="nome" id="nome" placeholder="Nome Fantasia Completo" required>
+                            
+                            <label for="cnpj" class="required"><br> CPNJ</label>
+                            <input type="number" name="cnpj" id="cnpj" placeholder="Somente números" required>
+                            
+                            <label for="razao" class="required"><br> Razão Social</label>
+                            <input type="text" name="razao" id="razao" placeholder="Razão Social da empresa" required>
+
+                            <label for="inscricao" class="required"><br> Inscrição Estadual</label>
+                            <input type="text" name="inscricao" id="inscricao" placeholder="(Estado - Número)" required>
+                </div>
+
+                <div id="cadastro_right">
+            
+                        <label for="telefone" class="required"> Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="(DDD + Número)" required>
+
+                        <label for="site"><br> Site</label>
+                        <input type="url" name="site" id="site" placeholder="https://www.nomesite.com">
+
+                        <label for="email" class="required"><br> E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="username@email.com" required>
+
+                        <label for="senha" class="required"><br> Senha</label>
+                        <input type="password" name="senha" id="senha" minlength="6" maxlength="12" placeholder="********" required maxlength="12"><br><br>
+                </div>
+                <div id="cadastro_bottom">
+                        <input type="checkbox" name="concordo" id="concordo" required>
+                        <label for="concordo" class="required" id="text_concordo">Concordo com os Termos de uso e a política de privacidade.</label><br><br><br> 
+                        <input type="submit" name="enviar" id="enviar_cadastro" value="Ok">
+                </div>
+                </form>
+            <div id="detalhe_cadastro"></div>
+        </section>
+       <!--Rodapé-->
+       <footer id="rodape">
+           Todos os direitos reservados &copy; 2021
+       </footer>
+ 
+    </body>
+</html>

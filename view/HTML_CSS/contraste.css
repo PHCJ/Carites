@@ -1,0 +1,1923 @@
+                                    /* Projeto loja virtual Cárites */
+
+    /*Zerando a página*/
+    *{margin: 0; padding: 0; box-sizing: border-box; background-color:black !important; color:white !important}
+
+    /* Bases */ 
+    body{
+        float: left;
+        width: 100%;
+        height: 100%;
+        font-family: "Agency FB", courier monospace;
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+
+    a, li{
+        color: yellow !important;
+    }
+
+    /*Retirei
+    Barra de Acessibilidade 
+    #brancotopo{
+        width: 100%;
+        height: 30px;
+        min-height: 10%;
+        background-color: #343a40;  
+    }*/
+
+    #acessibilidade{
+        float: left;
+        width: 100%;
+        min-height: 3%;
+        background-color: #000; 
+        /*Retirei
+        height: 300px;
+        margin-bottom: -20px;*/ 
+    }
+  
+    #atalhos{
+        list-style: none;
+        font-family: arial;
+        float: left;
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+  
+    #atalhos li{
+        display: inline;
+    }
+  
+    #atalhos2{
+        list-style: none;
+        font-family: arial;
+        float: right;
+        margin-right: 30px;
+        margin-bottom: 0; 
+    }
+  
+    #atalhos2 li{
+        display: inline;
+    }
+
+    header{
+        float: left;
+        width: 100%;
+        min-height: 20%;
+    }
+
+    /* caminho */
+    .breadcrump{
+        padding-left: 2%;
+        list-style: none;   
+    }
+   
+    .breadcrump li{
+        display: inline;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.7em;
+        color: #000;
+    }
+  
+    .breadcrump li+li:before{
+        padding: 8px;
+        content: "/\00a0";
+        color: #000; 
+    }
+  
+    .breadcrump li{
+        color: rgb(56, 55, 55);
+        text-decoration: none;
+    }
+
+    .breadcrump1{
+        padding-left: 2%;
+        list-style: none;
+        position: absolute;
+        margin-top: 110px;
+        width: auto;
+    }
+
+    .breadcrump1 li{
+        display: inline;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.7em;
+        color: #000;
+        color: rgb(56, 55, 55);
+        text-decoration: none;
+     }
+      
+    .breadcrump1 li+li:before{
+          padding: 8px;
+          content: "/\00a0";
+          color: #000;    
+    }
+
+    .breadcrump2{
+        padding-left: 2%;
+        list-style: none;
+        position: absolute;
+        margin-top: 20px;
+        width: auto;
+        color: white;   
+    }
+
+    .breadcrump2 li{
+        display: inline;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.7em;
+        color: white;
+        text-decoration: none;
+    }
+      
+    .breadcrump2 li+li:before{
+          padding: 8px;
+          content: "/\00a0";
+          color: white;   
+    }  
+    /*Fim breadcrump*/
+
+    #conteudo{
+        float: left;
+        width: 100%;
+        min-height: 35%;
+    }
+
+    #conteudo2{
+        float: left;
+        width: 60%;
+        min-height: 35%;
+        z-index: -1;
+    }
+
+    /*Rodapé*/
+    #rodape{
+        float: left;
+        width: 100%;
+        min-height: 10%;
+        padding-top: 10px ;
+        padding-bottom: 10px ;
+        background-color:#444;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #FFF;
+        text-align: center;
+        border: 2px solid #333;
+    }
+
+    /* Personalizar a barra scrollbar */
+    ::-webkit-scrollbar{
+        width: 10px;
+        height: 10px; 
+   }
+  
+    ::-webkit-scrollbar-track{
+        background: #444; 
+    }
+  
+    ::-webkit-scrollbar-thumb{
+        background: #FFDB00; 
+    }
+
+    /*Fim bases*/
+
+    /*Menu principal e menu departamentos*/
+
+    /* MENU */
+
+    .fundo{
+        background-color: #000!important;
+        color: white !important;
+        max-height: 85px!important;
+    }
+
+    nav {
+    background-color: #000 !important;
+}
+
+    input{
+        padding: 1px;
+    }
+
+    #logo{ 
+        width: 72px;
+        height: 74px;
+        margin-left: 20px;
+    }
+
+    .form-control{
+        width: 300px;
+        min-width: 265px; 
+        height: 38px;
+        border-radius: 3px;
+        margin-bottom: 0x;
+        margin-top: -30px;
+        margin-left: 40px; 
+    }
+
+    #historico, option{
+        max-width: 200px;  
+    }
+
+     .btnBusca{
+        width: 42px; 
+        height: 38px;
+        background-image: url(Imagens/lupa.png);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;        
+    }
+
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+        color: #222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 10px;
+        padding-left: 30px;  
+    }
+
+    
+    .navbar-expand-lg .navbar-nav .nav-link:hover {
+        color: #86A569;
+    }
+
+
+    .navbar{
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 1px;
+        margin: 0; 
+    }
+
+    .nav-link{
+        font-size: 1em;        
+    }
+    
+    .bg-dark {
+        background-color: #343a40!important;
+        max-height: 85px!important;
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%;
+        background-color: yellow!important;
+    }
+
+    .navbar-expand {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .navbar, .navbar-expand-lg, .navbar-light, .bg-light{
+       z-index: 100;
+       border-bottom: 2px solid rgba(153, 153, 153, 0.473);
+       -webkit-box-shadow: 0px 12px 9px -1px rgba(153,153,153,0.52); 
+       box-shadow: 0px 12px 9px -1px rgba(153,153,153,0.52);   
+    }
+    
+    /* menu superior preto */    
+    .navbar-dark{
+        padding: 1px;
+    }
+     
+    .bg-dark{
+        padding: 1px;
+    }
+
+    .amarelo_menu{
+        padding-right: 80px;
+        padding-left: 10px ;
+    }
+
+    .d-block, .d-lg-inline{
+        padding-right: 10px;
+    }
+
+    label{
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0; 
+    }
+
+    /*Home*/
+    #capa_home{
+        float: left;
+        width: 100%;
+        height: auto;    
+        background-image: url("Imagens/capa_home.fw.png");
+    }
+
+    #titulo_home{     
+        text-align: center;
+        color: white;
+        font-size: 2.8em;
+        font-family: Britannic;
+        font-style: bold;
+        width: auto;
+        height: auto;  
+        position: relative;
+        padding: 0;
+        margin: 0;
+        padding-top: 60px;
+    }
+
+    #seta_home{
+        width: 25px;
+        position: relative;
+        margin-left: 47%;
+        margin-right: 47%;
+        margin-top: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        padding-top: 30px;
+    }
+
+    #titulo2_home{  
+        width: auto;
+        height: auto;   
+        position: relative;
+        margin-left: 6%;
+        margin-top: 1%;
+        margin-bottom: 2%;
+        text-align: left;
+        font-family: 'Agency FB';
+        font-weight: lighter;
+        color: #6e6d6d;
+        font-size: 1.6em;
+    }
+
+    /*1° section produtos*/ 
+    #bloco_home{
+        float: center;
+        width: 85%;
+        height: auto;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    /*2° section produtos*/ 
+    #bloco2_home{
+        float: center;
+        width: 85%;
+        height: auto;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    
+    .p_home{
+        text-align: center;
+        font-family: 'Agency FB';
+        font-style: normal;
+        color: #545454;
+        font-size: 1.1em;
+        margin: 0;
+        position: relative;
+        width: 228px;
+   
+    }
+
+    .p2_home{
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Agency FB';
+        font-style: normal;
+        color: #545454;
+        font-size: 1em;
+        margin: 0;
+        position: relative;
+        padding: 20px; 
+        width: 228px; 
+    }
+
+    .imagem_home{
+        float: left;
+        width: 230px;
+        border-bottom: solid 2px gold;
+        box-shadow: 0 0 1em #AAA;
+        padding-bottom: 20px;
+        margin-left: 3%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 200px;
+        position: relative;
+    }
+
+    .imagem_home:hover{
+        border-bottom: solid 2px gold;
+        box-shadow: 0 0 1em rgb(94, 94, 93);
+    }
+
+    .produto_home{
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 18px;
+        width: 80%; 
+    }
+    /*Fim Home*/
+
+    /* Login */
+    #capa_login{
+        float: left;
+        width: 100%;
+        height: 100%;  
+        min-height: 578px;  
+        background-color:red;
+        background-image: url("Imagens/fundologin.fw.jpeg");
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: 100%;
+        background-size: cover;
+    }
+
+    #branco_login{
+        /* a caixa tem 47% */
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        margin-top: 180px;  
+        margin-left: 30%;
+        margin-right: 29%; 
+        background-image: url("Imagens/fundopretologin.fw.png"); 
+        background-repeat: no-repeat;
+         background-size: 600px;
+        background-color: transparent!important;
+        z-index: 10;
+       
+    }
+
+    #titulo_login{
+        padding: 0;
+        margin: 0;
+        width: 300px;
+        text-align: center;
+        margin-top: 40px;
+        margin-left: 140px;
+    }
+
+    #form{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 500px;
+        text-align: center;
+        margin-left: 40px;
+    }
+
+
+    .alinhamento_login{
+        text-align: left;
+        margin-left: -315px;
+    }
+
+    #enviar_login{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        width: 250px;
+        border: 2px solid #333;
+    }
+
+    .nao_cadastro{
+        margin: 0;
+        width: 250px;
+        padding: 0;
+        border: solid 1px rgb(155, 153, 147);
+        margin-left: auto;
+        margin-right: auto; 
+        text-decoration: none;
+        color: #000;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    a {
+        color: white;
+    } 
+
+    .login_termos{
+        padding: 0;
+        margin: 0;
+        width: 500px; 
+        font-size: 1em; 
+        text-align: center; 
+        
+    }
+
+    input[type=email]{
+        width: 360px;   
+        background-color: inherit;
+    }
+
+    input[type=password]{
+        width: 360px;  
+        background-color: inherit; 
+    }
+
+    /* esse campo é do arquivo cadastro */
+
+    input[type=tel]{
+        width: 360px;   
+        background-color: inherit;
+    }
+    /* Fim Login */
+
+    /* Cadastro */
+
+    #cadastro{
+        float: left;
+        width: 600px;
+        min-height: 550px;
+        margin-left: 5%;
+    }
+
+    #capa_cadastro{ 
+        float: left;
+        min-height: 820px; 
+        width: 420px;
+        padding: 0;
+        margin: 0;
+        z-index: -10;
+        /*Retirei
+        width: 400px;
+        height: 90%;
+        position: relative;*/
+    }
+
+    #detalhe_cadastro{
+        background-image: url("Imagens/detalhe_cadastro.png");
+        background-repeat: no-repeat;
+        float: right;
+        min-height: 625px;
+        min-width: 145px;
+        padding: 0;
+        bottom: 0;
+        background-size:cover;
+        /*
+        Retirei ou alterei
+        width: 100px;
+        height: 500px;
+        position: absolute;
+        right: 5px;
+        */ 
+    }
+
+    #geral_cadastro{
+        float: left;
+        width: 100%;
+        min-height: 67%;
+        /* 
+        Retirei ou alterei
+        margin-top: -600px;
+        padding-top:0;
+        margin-left: 30%;
+        margin-right: 10%;
+        position: relative;  
+        min-height: 80%;*/     
+    }
+
+
+    #titulo1_cadastro{
+        float: left;
+        text-align: center;
+        color: #86A569;
+        font-size: 2em;
+        font-family: "Agency FB";
+        font-weight: lighter;
+    
+        margin-top: 3%;
+        margin-bottom: 4%;
+        width: 800px;
+        height: auto;
+        /*
+        Retirei ou alterei
+        position: relative;
+        padding: 0;
+        margin: 0;
+        margin-bottom: -20px;*/        
+    }
+
+    #esquerda_doacao{
+        float: left;
+        width: 250px;
+        padding-bottom: 20px;
+        margin-left: 15%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    #cadastro_left{
+        float: left;
+        z-index: 20;
+        display: flex;
+        flex-wrap: wrap;
+        width: 240px;
+        margin-right: 15px;
+        /*
+        Retirei ou alterei
+        position: relative;
+        margin-left: 15%;
+        */
+
+    }
+
+    #cadastro_right{
+        /*position: relative;
+        margin-left: 15%; 
+        */
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+        width: 250px; 
+         margin-left: 15px;   
+    }
+
+    #cadastro_bottom{
+        /*position: absolute;*/
+        /*padding-left: 150px;*/
+        /*margin-top: 250px;*/
+        height: auto;
+        width: 550px;
+        float: left;
+        margin-left: 70px;
+    }
+
+    input, select{
+        width: 250px;
+        color: #777;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-family: "Agency FB";
+        font-size: 1em;
+        padding-top: 10px;
+        border-bottom: 1px solid;          
+    }
+    
+    label, legend{
+        font-family: "Agency FB";
+        font-size: 1.5em;
+        color: #555;
+        background-color: none;
+    }
+
+    input[type=submit]{
+        width: 240px;
+        height: 35px;
+        background-color: rgb(134, 165, 105);
+        color: #FFF;
+        box-shadow: 5px 5px 5px black;
+        margin-right: 5%;
+        font-size: 1.5em;
+        padding-top: 0px;
+        border-bottom: none;           
+    }
+    
+    input[type=reset]{
+        width: 240px;
+        height: 35px;
+        background-color: rgb(134, 165, 105);
+        color: #FFF;
+        box-shadow: 5px 5px 5px black;
+        font-size: 1.5em;
+        padding-top: 0px;  
+    }
+
+    input[type=submit]:hover{
+        background-color: rgb(43, 54, 33);
+        box-shadow: 5px 5px 5px rgb(134, 165, 105);
+        transition: 1s;
+    }
+
+    input[type=reset]:hover{
+        background-color: black ;
+        box-shadow: 5px 5px 5px rgb(134, 165, 105);
+        transition: 1s;
+    }
+
+    .required:after{
+        content: "*";
+        color: red;
+    }
+    
+    #concordo{
+        width: 20px;
+        margin-top: 26px;
+        /*margin-left: 130px;*/
+    }
+
+    #text_concordo{
+        padding-top: 0px;
+        font-size: 1em;
+        text-align: center;
+      
+    }
+
+    #enviar_cadastro{
+        margin-left: 183px;
+        margin-right: 183px;
+        padding: 0;
+        width: 250px;
+        border: 2px solid #333;
+    }
+
+    #capa_precadastro{
+        width: auto;
+        height: 700px;
+        padding: 0;
+        margin: 0;
+        z-index: -5;
+        float: right;
+        margin-top: -10px;
+       
+    } 
+
+    #titulo_cadastro{
+        margin-left: 100px;
+        color: rgb(134, 165, 105);
+        margin-top: 100px;
+
+    }
+
+
+    #titulo_precadastro{
+        text-align: center;
+        color: rgb(134, 165, 105);
+        padding-top: 210px;
+        width: 55%;
+        padding-left: 30px;
+
+    }
+
+    .text_precadastro{
+        font-size: 1.5em;
+        text-align: center;
+        width: 55%;
+        padding-left: 30px;
+
+    }
+
+    .cadastro_pfpj{
+        text-align: center;
+        width: 55%;
+        padding-left: 30px;
+       
+    }
+    .precadastrobotao{ 
+
+        background-color: rgb(134, 165, 105);
+        color: #FFF;
+        box-shadow: 5px 5px 5px black;
+        margin-right: 0;
+       
+        font-size: 1.5em;
+        padding-top: 0px;
+        border-bottom: none;
+        margin-top: 20px;      
+        margin-left: 250px;       
+}
+
+    /* Fim Cadastro */
+
+    /* Doação */
+    #titulo1_doacao{
+        text-align: center;
+        color: #86A569;
+        font-size: 2.1em;
+        font-family: "Agency FB";
+        font-weight: lighter;
+        position: relative;
+        width: 200px;
+        height: 50px;
+        margin-left: 30%;
+        margin-top: 130px;     
+    }
+
+    
+    #capa_doacao{
+        width: 400px;
+        height: 900px;
+        padding: 0;
+        margin: 0;
+        z-index: -5;
+        right: 0;
+        position: fixed;
+        margin-top: -60px;  
+    }
+
+    label, textarea {
+       letter-spacing: 1px;
+    }
+
+    textarea {
+        padding: 3px;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;  
+    }
+
+
+    #detalhe_doacao{
+        background-image: url("Imagens/detalhe_doar.fw.png");
+        background-repeat: no-repeat;
+        width: 130px;
+        height: 500px;
+        position: absolute; 
+        padding: 0;
+        bottom: 0;
+        background-size: cover;
+        position: fixed;
+        z-index: -5;
+    }
+
+    .doacao{
+        margin-left: 15%;
+    }
+
+    #esquerda_doacao{
+        float: left;
+        width: 250px;
+        padding-bottom: 20px;
+        margin-left: 15%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    #direita_doacao{
+        float: left;
+        width: 250px;
+        padding-bottom: 20px;
+        margin-left: 10%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .confirmar_doacao{ 
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        margin-left: 15%;
+        margin-top: -20px;
+        margin-bottom: 10px;       
+    }
+
+    input[type=radio]{
+    width: auto; 
+    height: auto;  
+    margin: 8px;
+    padding: 0;
+
+    }
+
+    input[type=checkbox]{
+        width: auto; 
+        height: auto;  
+        margin: 8px;
+        padding: 0;
+    }
+
+    .pfpj{
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .ciencia{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #fotos{
+        padding-top: 7px;
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 3px;
+        margin-top: 2px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;       
+    }
+   
+    input[type=file]{
+        width: auto; 
+        height: auto;  
+        padding: 0;
+        border: none;
+        font-size: 13px;   
+    }
+
+    label #file-upload-button{
+        background-color: blueviolet;
+        color: brown;
+    }
+    /* Fim Doação */
+
+
+    /* Página Acessibilidade*/
+    #bloco_acess{
+        background-color: rgb(255, 255, 255);
+        color:black;
+        width: 86%;
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-top: 2%;
+        margin-bottom: 0;
+        height: 150%;
+        border: 7px double #86A569;
+    }
+  
+    .titulo_acess{
+        color: #86A569;
+        font-size: 2.1em;
+        font-family: "Agency FB";
+        font-weight: lighter;
+        text-align: center;
+        letter-spacing: 2px;
+        padding-top: 10px;
+    }
+  
+    .acessibilidade{
+       font-size: 1.4em;
+       margin-left: 80px;
+       margin-right: 80px;
+       color:black;
+       text-align: justify;
+  }
+    .fontepreta{
+    color: black;
+    text-decoration: underline;
+    }  
+  /* Fim página Acessibilidade*/
+
+/*
+    #rodape2{
+     
+        width: 100%;
+        min-height: 10%;
+        padding-top: 10px ;
+        padding-bottom: 10px ;
+        background-color:#444;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        color: #FFF;
+        text-align: center;
+        bottom: 0;
+        z-index: 100;
+    }
+*/
+
+
+
+    /* responsividade */
+
+    @media screen and (min-width: 1070px){ 
+
+         /* Aqui é o tamanho da barra de pesquisa */
+        .form-control{
+            width: 300px;
+            min-width: 300px; 
+            height: 38px;
+            border-radius: 3px;
+            margin-bottom: 0x;
+            margin-top: -30px;
+            margin-left: 40px;     
+        }
+
+        .amarelo_menu{
+
+            padding-right: 80px;
+            padding-left: 10px ;
+        }     
+    }
+    
+    @media screen and (min-width: 850px) and (max-width: 1070px){ 
+        
+        .navbar {
+            padding: 8px;
+        }
+
+        /* Aqui é o tamanho da barra de pesquisa */
+
+        .form-control{
+            width: 200px;
+            min-width: 200px; 
+            height: 38px;
+            border-radius: 3px;
+            margin-bottom: 0x;
+            margin-top: -30px;
+            margin-left: 40px;     
+        }
+
+        .amarelo_menu{
+
+            padding-right: 8px;
+            padding-left: 1px ;
+        }
+
+
+        /* caixa login*/ 
+
+        #branco_login{
+            position: absolute;
+            width: 605px;
+            height: 486px;
+            margin-top: 180px;  
+            margin-left: 21%;
+            margin-right: 20%; 
+            background-size: 600px;
+        }     
+    }
+    
+
+    @media screen and (min-width: 700px) and (max-width: 850px){ 
+        
+        #titulo_home{     
+            text-align: center;
+            color: white;
+            font-size: 2.4em;
+            font-family: Britannic;
+            font-style: bold;
+            width: auto;
+            height: auto;  
+            position: relative;
+            padding: 0;
+            margin: 0;
+            padding-top: 60px;
+        }
+
+            
+         /*1° section produtos*/ 
+        #bloco_home{
+             float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 19%;
+             margin-right: 1%;
+        }
+
+        /*2° section produtos*/ 
+        #bloco2_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 19%;
+            margin-right: 1%;
+        }
+
+
+         /* caixa login  */
+         #branco_login{
+            position: absolute;
+            width: 605px;
+            height: 486px;
+            margin-top: 180px;  
+            margin-left: 14%;
+            margin-right: 0%; 
+            background-size: 600px;
+        }             
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 700px){ 
+        
+        #titulo_home{     
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            font-family: Britannic;
+            font-style: bold;
+            width: auto;
+            height: auto;  
+            position: relative;
+            padding: 0;
+            margin: 0;
+            padding-top: 60px;
+        }
+        
+         /*TIRAR DO CODIGO
+        #acessibilidade{
+           width: 100%;
+           height: 300px;
+           height: 3%;
+           margin-bottom: -20px;
+          }*/
+
+          /* Acessibilidade */
+          
+           #atalhos, #atalhos2{
+          
+            font-size: 0.7em;
+            margin-left: 10px;
+          }
+
+
+        /*1° section produtos*/ 
+        #bloco_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 15%;
+            margin-right: 15%;
+         }
+
+        /*2° section produtos*/ 
+        #bloco2_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    
+        /* Descrição produtos*/
+         .p_home{
+            text-align: center;
+            font-family: 'Agency FB';
+            font-style: normal;
+            color: #545454;
+            font-size: 1.2em;
+            margin: 0;
+            position: relative;
+            width: 228px;
+        }
+
+        /* caixa login */
+
+        #branco_login{
+            position: absolute;
+            width: 560px;
+            height: 500px;
+            margin-top: 180px;  
+            margin-left: 5%;
+            margin-right: 1%; 
+            background-size: 570px;
+            background-image: cover;
+        }     
+        
+        
+
+    }
+
+
+    @media screen and (max-width: 350px){
+        
+        /* Acessibilidade */
+          
+        #atalhos, #atalhos2{
+         font-size: 0.7em;
+         margin-left: 10px;
+          }
+
+        /*1° section produtos*/ 
+        #bloco_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+
+        /*2° section produtos*/ 
+        #bloco2_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+        
+        /* Descrição produtos*/
+        .p_home{
+            text-align: center;
+            font-family: 'Agency FB';
+            font-style: normal;
+            color: #545454;
+            font-size: 1.2em;
+            margin: 0;
+            position: relative;
+            width: 228px;   
+        }
+
+
+             /* caixa login 
+
+             #branco_login{
+                position: absolute;
+                width: 560px;
+                height: 500px;
+                margin-top: 180px;  
+                margin-left: 1%;
+                margin-right: 1%; 
+                background-size: 570px;
+                background-image: cover;
+           } */
+
+   }
+
+   .navbar-expand-lg, .navbar-light, .bg-light {
+    z-index: 100;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.473);
+    -webkit-box-shadow: 0px 12px 9px -1px rgb(153 153 153 / 52%);
+    box-shadow: 0px 12px 9px -1px rgb(153 153 153 / 52%);
+    background-color: #222!important;
+}
+
+
+
+
+   /* DANI */
+
+                      /* RESPONSIVIDADE */
+
+    @media screen and (min-width: 1070px){ 
+
+         /* Aqui é o tamanho da barra de pesquisa */
+        .form-control{
+            width: 300px;
+            min-width: 300px; 
+            height: 38px;
+            border-radius: 3px;
+            margin-bottom: 0x;
+            margin-top: -30px;
+            margin-left: 40px;     
+        }
+
+        .amarelo_menu{
+
+            padding-right: 80px;
+            padding-left: 10px ;
+        }   
+        
+    }
+    
+        
+    @media screen and (min-width: 850px) and (max-width: 1070px){ 
+        
+        .navbar {
+            padding: 8px;
+        }
+
+        /* Aqui é o tamanho da barra de pesquisa */
+
+        .form-control{
+            width: 200px;
+            min-width: 200px; 
+            height: 38px;
+            border-radius: 3px;
+            margin-bottom: 0x;
+            margin-top: -30px;
+            margin-left: 40px;     
+        }
+
+        .amarelo_menu{
+
+            padding-right: 8px;
+            padding-left: 1px ;
+        }
+
+
+        /* caixa login*/ 
+
+        #branco_login{
+            position: absolute;
+            width: 605px;
+            height: 486px;
+            margin-top: 180px;  
+            margin-left: 21%;
+            margin-right: 20%; 
+            background-size: 600px;
+        }  
+        
+                         
+        #capa_doacao{
+            background-image: none; 
+            display: none;
+        }
+
+
+        #esquerda_doacao{
+            float: left;
+            width: 250px;
+            padding-bottom: 20px;
+            margin-left: 15%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            position: relative;
+            margin-top: 10px;
+            margin-right: 0;
+        }
+    
+        #direita_doacao{
+            float: left;
+            width: 250px;
+            padding-bottom: 20px;
+            margin-left: 15%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 600px;
+            position: relative;
+            margin-top: 10px;
+            margin-right: 0;
+        }
+    
+        .confirmar_doacao{ 
+            margin: 0;
+            padding: 0;
+            width: 250px;
+            margin-top: -20px;
+            margin-bottom: 10px; 
+            margin-left: 15%;      
+        }
+
+
+        #titulo1_doacao{
+            text-align: center;
+            color: #86A569;
+            font-size: 2.1em;
+            font-family: "Agency FB";
+            font-weight: lighter;
+            position: relative;
+            width: 200px;
+            height: 50px;
+            margin-left: 36%;
+            margin-top: 150px;     
+        }
+
+    }
+    
+
+    @media screen and (min-width: 700px) and (max-width: 850px){ 
+        
+        #titulo_home{     
+            text-align: center;
+            color: white;
+            font-size: 2.4em;
+            font-family: Britannic;
+            font-style: bold;
+            width: auto;
+            height: auto;  
+            position: relative;
+            padding: 0;
+            margin: 0;
+            padding-top: 60px;
+        }
+
+            
+         /*1° section produtos*/ 
+        #bloco_home{
+             float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 19%;
+             margin-right: 1%;
+        }
+
+        /*2° section produtos*/ 
+        #bloco2_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 19%;
+            margin-right: 1%;
+        }
+
+
+         /* caixa login  */
+         #branco_login{
+            position: absolute;
+            width: 605px;
+            height: 486px;
+            margin-top: 180px;  
+            margin-left: 14%;
+            margin-right: 0%; 
+            background-size: 600px;
+        }    
+        
+        
+        #capa_doacao{
+            background-image: none; 
+            display: none;
+        }
+        
+        
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 700px){ 
+
+
+   
+        
+        #titulo_home{     
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            font-family: Britannic;
+            font-style: bold;
+            width: auto;
+            height: auto;  
+            position: relative;
+            padding: 0;
+            margin: 0;
+            padding-top: 60px;
+        }
+        
+        #acessibilidade{
+            width: 100%;
+            height: 300px;
+            margin: 0!important;
+            padding: 0;;
+       
+        }
+
+        /* Acessibilidade */
+          
+        #atalhos2{
+            font-size: 0.7em;
+            margin-left: -200px;
+        }
+
+
+        /*1° section produtos*/ 
+        #bloco_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 15%;
+            margin-right: 15%;
+         }
+
+        /*2° section produtos*/ 
+        #bloco2_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    
+        /* Descrição produtos*/
+         .p_home{
+            text-align: center;
+            font-family: 'Agency FB';
+            font-style: normal;
+            color: #545454;
+            font-size: 1.2em;
+            margin: 0;
+            position: relative;
+            width: 228px;
+        }
+   
+
+         /* Página doação */
+        
+        #capa_doacao{
+            background-image: none; 
+            display: none;
+        }
+
+    
+        #esquerda_doacao{
+            float: left;
+            width: 250px;
+            padding-bottom: 20px;
+            margin-left: 25%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            position: relative;
+            margin-top: 10px;
+            margin-right: 0;
+            
+        }
+    
+        #direita_doacao{
+            float: left;
+            width: 250px;
+            padding-bottom: 20px;
+            margin-left: 25%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 600px;
+            position: relative;
+            margin-top: 90px;
+            margin-right: 0;
+        }
+
+        .confirmar_doacao{ 
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            margin-left: -60px;
+            margin-right: 0;
+            margin-top: 15px;
+            margin-bottom: 25px;  
+            padding-top: 20px; 
+            font-size: 0.9em;    
+            margin-bottom: 20px;
+        }   
+    
+    
+        #enviar_cadastro{
+            margin-left: 183px;
+            margin-right: 183px;
+            padding: 0;
+            width: 50px;
+        }
+    
+        #fotos{
+            padding-top: 7px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 3px;
+            margin-top: 2px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #999; 
+            max-width: 200px;
+            font-size: 0.8em;
+    
+        }
+    
+    
+        #detalhe_doacao{
+            background-image: none; 
+            display: none;
+        }
+
+
+        .ciencia{
+           font-size: 0.7em;
+       }
+        
+        #branco_login{
+            width: 460px;
+            height: 500px;
+            margin-top: 180px;  
+            background-image: url("Imagens/fundopretologin2.fw.png")!important;
+            background-repeat: no-repeat;
+            z-index: 10;
+            background-size: 460px;
+            margin-left: 3%;
+        }
+
+
+        #form{
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 400px;
+            text-align: center;
+            margin: 35px;
+            margin-top: -12px;
+        }
+
+        #titulo_login{
+            padding: 0;
+            margin: 0;
+            width: 250px;
+            text-align: right;
+            margin-top: 40px;
+            margin-left: 20px;
+        
+        }
+        
+        .login_termos{
+            padding: 0;
+            margin: 0;
+            width: 350px; 
+            font-size: 1em; 
+            text-align: center; 
+            margin-left: 6%; 
+        }
+        
+    }
+
+    @media screen and (max-width: 350px){
+        
+        /* Acessibilidade */
+          
+        #atalhos, #atalhos2{
+         font-size: 0.7em;
+         margin-left: 10px;
+        }
+
+        /*1° section produtos*/ 
+        #bloco_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+
+        /*2° section produtos*/ 
+        #bloco2_home{
+            float: center;
+            width: 85%;
+            height: auto;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+        
+        /* Descrição produtos*/
+        .p_home{
+            text-align: center;
+            font-family: 'Agency FB';
+            font-style: normal;
+            color: #545454;
+            font-size: 1.2em;
+            margin: 0;
+            position: relative;
+            width: 228px;   
+        }
+
+       /* Página doação */
+        
+        #capa_doacao{
+            background-image: none; 
+            display: none;
+       }
+
+
+        #esquerda_doacao{
+            float: left;
+            width: 250px;
+            padding-bottom: 20px;
+            margin-left: 5%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            position: relative;
+            margin-top: 10px;
+            margin-right: 0;
+            padding-top: 30px;
+        }
+
+        #direita_doacao{
+            float: left;
+            width: 250px;
+            padding-bottom: 20px;
+            margin-left: 5%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 600px;
+            position: relative;
+            margin-top: 150px;
+            margin-right: 0;
+        }
+
+        .confirmar_doacao{ 
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            margin-left: -126px;
+            margin-right: 0;
+            margin-top: 20px;
+            margin-bottom: 10px;  
+            padding-top: 30px;  
+        
+        }   
+
+
+        #enviar_cadastro{
+            margin-left: 183px;
+            margin-right: 183px;
+            padding: 0;
+            width: 50px;
+        }
+
+        #fotos{
+            padding-top: 7px;
+            padding-left: 0px;
+            padding-right: 0;
+            padding-bottom: 3px;
+            margin-top: 2px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #999; 
+            max-width: 175px;
+
+        }
+
+
+        #detalhe_doacao{
+            background-image: none; 
+            display: none;
+        }
+
+        .ciencia{
+            font-size: 0.5em;
+        }
+
+        #branco_login{
+            width: 260px;
+            height: 400px;
+            margin-top: 180px;  
+            background-image: url("Imagens/fundopretologin2.fw.png")!important;
+            background-repeat: no-repeat;
+            z-index: 10;
+            background-size: 260px;
+            margin-left: 3%;
+        }
+
+
+        #form{
+            position: relative;
+            padding: 0;
+            margin: 0;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        #titulo_login{
+            padding: 0;
+            margin: 0;
+            width: 250px;
+            text-align: right;
+            margin-top: 40px;
+        
+        }
+        
+        .login_termos{
+            padding: 0;
+            margin: 0;
+            width: 350px; 
+            font-size: 1em; 
+            text-align: center;  
+            margin-left: 5%;
+     
+        }
+    }  
+
+           /*Responsividade da página cadastro*/
+
+    @media screen and (max-width: 1226px){
+
+        #detalhe_cadastro{
+            width: 0;
+            height: 0;
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1180px) and (max-width: 1219px){
+
+        #titulo1_cadastro{
+            width: auto;
+            margin-left: 20%;
+        }
+    }
+
+    @media screen and (max-width: 1179px){
+
+         #capa_cadastro{
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        .breadcrump2{
+            width: 0;
+            height: 0;
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 931px) and (max-width: 1179px){
+
+        #detalhe_cadastro{
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
+        #titulo1_cadastro{
+            margin-left: 10%;
+        }
+
+        #cadastro{
+            margin-left: 20%;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 931px){
+
+        #geral_cadastro{
+            min-height: 820px; 
+        }
+
+        #detalhe_cadastro{
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        #titulo1_cadastro{
+            width: 400px;
+            height: auto;      
+        }
+
+        #cadastro{
+            margin-left: 10%;
+        }
+    }
+
+
+    @media screen and (max-width: 767px){
+
+        #acessibilidade{
+            display: block;
+            width: 100%;
+            height: 3%;
+        }
+
+        #geral_cadastro{
+            min-height: 1100px;
+        }
+
+        #cadastro{
+            width: auto;
+            margin-left: 20%;
+        }
+
+        #titulo1_cadastro{
+            width: 200px;
+            display: inline-flex;
+            margin-right: 25%;
+            font-size: 1.7em; 
+            height: auto;
+            margin-top: 10%;
+            margin-left: 10%;
+   
+        }
+
+        #cadastro_left{
+            float: none;
+            width: 180px;
+            margin: 0;
+        }
+
+        #cadastro_right{
+            float: none;
+            width: 180px;
+            margin: 0;
+        }
+
+        #cadastro_bottom{
+            width: 180px;
+            float: none;
+            margin: 0;
+        }
+
+        #enviar_cadastro{
+            margin: 0;
+        }
+    }
+
+    /*Fim responsividade da página cadastro*/ 
+
+
+   
+
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Lista de usuário PJ </title>
+        <link rel='stylesheets/style.css' />
+    </head>
+    <body>
+        <h1><% mensagem %></h1>
+        <ul>
+            <% docs.forEach(function(usuariopj){ %>
+            <li>
+                <%= usuariopj.nome %>
+                <input type="button" onclick="location.href='/delete/usuariopj/<%= usuariopj.idpj %>'" value="delete" />
+                <input type="button" onclick="location.href='/edit/usuariopj/<%= usuariopj.idpj %>'" value="editar" />
+            </li>
+          <% }) %>
+        </ul>
+    </body>
+</html>
+
+

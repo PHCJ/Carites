@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>Cadastro</title>
+		<!-- Metadados -->
+		<meta charset="utf-8">
+		<meta name="Description" content="Doação">
+		<meta name="Keywords" content="Doaçaõ, html, web">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="Imagens/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link id="acessibilidadeCss" rel="stylesheet" href="estilo.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="JavaScript/fonte.js"></script>
+        <script src="JavaScript/contraste.js"></script>
+        <script src="JavaScript/cadastro.js"></script>
+        <script src="JavaScript/doacao.js"></script>
+        <script src="JavaScript/login.js"></script>
+
+	</head>
+	<body style="width:100%;">
+        <!--Barra de Acessibilidade-->
+        <div id="acessibilidade">
+            <ul id="atalhos" class="d-none d-lg-inline">
+               <li><a href="#titulo1_cadastro" accesskey="1" title="Ir diretamente para o conteúdo">|   Ir para o conteúdo [1]</a></li>
+               <li><a href="#menu" accesskey="2" title="Ir diretamente para o menu">Ir para o menu [2]</a></li>
+               <li><a href="#rodape" accesskey="3" title="Ir diretamente para o rodapé">Ir para o rodapé [3]  |</a></li>
+            </ul>
+            <ul id="atalhos2">
+              <li><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">|  Acessibilidade</a></li>
+             <li class="contraste"><a href="javascript:void(0)" title="Contraste Preto" id="contraste">CONTRASTE PRETO</a></li>
+             <li class="contraste"><a href="javascript:void(0)" title="Sem Contraste" id="semcontraste">SEM CONTRASTE</a></li>
+             <li class="fonte"><a href="javascript:void(0);" title="Aumentar a fonte (Ctrl +)" id="aumenta">A+</a></li>
+             <li class="fonte"><a href="javascript:void(0);" title="Diminuir a Fonte (Ctrl -)" id="diminui">A-  |</a></li>
+            </ul>      
+         <!--  </div>-->
+        </div>
+        <!-- Fim Barra de Acessibilidade-->
+       <!--Libras-->
+       <div vw class="enabled">
+           <div vw-access-button class="active"></div>
+           <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+           </div>
+           </div>
+           <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+           <script>
+           new window.VLibras.Widget('https://vlibras.gov.br/app');
+           </script>
+       <!--Fim Libras-->	
+       <header>
+         <!-- Inicio Bootstrap -->
+               <!-- Parte Superior do Menu -->
+               <nav class="navbar navbar-expand fundo">
+                 <a class="navbar-brand" href="index.html"><img id="logo" src="Imagens/carites.png" alt="Logo marca"></a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+           
+                 <div class="collapse navbar-collapse" id="navbarsExample02">
+                      <form class="form-inline my-2 my-md-0 d-none d-lg-inline">
+                         <input class="form-control" type="search" list="historico" placeholder=" Pesquisa">
+                         <a href="pesquisar.html"> <input class="btnBusca" type="button"> </a>
+                          
+                       </form>
+
+                       <datalist class="datalist_edit" id="historico">
+                         <option value ="Arte Brasileira"></option>
+                         <option value ="Artesanato"></option>
+                         <option value ="Quadros e Pinturas"></option>
+                         <option value ="Decoração"></option>
+                         <option value ="Livros infantis"></option>
+                       </datalist>
+
+                   <ul class="navbar-nav mr-auto ml-5 ">
+                     <li class="nav-item active ">
+                       <a class="nav-link" href="Login.html"><img src="Imagens/img_cadastro.fw.png" alt="cadastro" style="width:100%"></a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="doacao.html"><img src="Imagens/img_doar.fw.png" alt="doação" style="width:100%"></a>
+                       </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="carrinho.html"><img src="Imagens/img_carrinho.fw.png" alt="carrinho" style="width:100%"></a>
+                     </li>
+                   </ul>
+             
+                 </div>
+               </nav>
+
+             <!-- Parte Inferior do Menu -->
+             <nav class="navbar navbar-expand-lg navbar-light bg-light iconemenu" style="z-index: 100;">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                  <ul  class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Itens Decorativos</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Livros</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="pesquisar.html">Pinturas</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Esculturas</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Caixas Artesanias</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Acessórios</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Bordados</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Pelúcia</a>
+                    </li>
+                  </ul>
+                  
+                  <div class="amarelo_menu">
+                    <a href="sobre_nos.html" class="d-block d-lg-inline"><img src="Imagens/img_sobre.fw.png" alt="Sobre nós"></a>
+                    <a href="contato.html" class="d-block d-lg-inline"><img src="Imagens/img_contato.fw.png" alt="Contato"></a></div>
+                </div>  
+              </nav>
+         <!-- Fim Bootstrap -->
+        </header>
+        <!--Inicio Conteudo-->
+       
+        <section>  
+          <img src="Imagens/fundo_cadastro.png" alt="Pote com Pinceis" id="capa_precadastro">
+
+            <h1 id="titulo_precadastro">Cadastre-se</h1><br>
+
+            <p class="text_precadastro">Para continuar, selecione uma das opções abaixo: </p>
+                <br>
+                <form name="precadastro" id="precadastro" method="post">
+                    <div class="cadastro_pfpj">
+                        <label for="pf" class="required">PF (Pessoa Física)</label>
+                        <input type="radio" id="pf" name="p" value="p"><br><br>
+
+                        <label for="pj" class="required">PJ (Pessoa Jurídica)</label>
+                        <input type="radio" id="pj" name="p" value="p">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="cadastro"> 
+                        <input class="precadastrobotao" value="Continuar" type="button" name="enviar" onclick="aaa()"><br>
+                    </div>              
+                </form>   
+    </section>
+        <footer id="rodape">
+            Todos os direitos reservados &copy; 2021
+        </footer>
+    </body>
+</html>
